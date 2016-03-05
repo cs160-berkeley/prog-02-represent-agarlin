@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.annamarie.proj2.MainView"
+    android:background="#143960">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="94709"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:layout_marginRight="@dimen/text_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:id="@+id/textView5"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="2012 Voting Stats"
+        android:id="@+id/vote"
+        android:background="#E0162B"
+        android:textColor="#ffffff"
+        android:stateListAnimator="@null"
+        android:textSize="12sp"
+        android:padding="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        />
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+    <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<android.support.wearable.view.CardFrame-->
+                <!--android:id="@+id/cardFrame"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginTop="100dp"-->
+                <!--android:layout_below="@+id/button1"-->
+                <!--android:layout_alignParentStart="true">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</android.support.wearable.view.CardFrame>-->
+
+            <!--<android.support.wearable.view.CardFrame-->
+                <!--android:id="@+id/cardFrame2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginTop="205dp"-->
+                <!--android:layout_below="@+id/button1"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!-->-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</android.support.wearable.view.CardFrame>-->
+
+            <!--<android.support.wearable.view.CardFrame-->
+                <!--android:id="@+id/cardFrame3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginTop="310dp"-->
+                <!--android:layout_below="@+id/button1"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_gravity="right|bottom">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</android.support.wearable.view.CardFrame>-->
+
+        <!--</FrameLayout>-->
+   </android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>

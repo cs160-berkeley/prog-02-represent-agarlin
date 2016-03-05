@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.annamarie.proj2.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#143960"
+    >
+
+    <Button
+        android:layout_width="206dp"
+        android:layout_height="30dp"
+        android:text="@string/use_curr"
+        android:id="@+id/button2"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="106dp"
+        android:background="#2363A7"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignStart="@+id/editText1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stars2"
+        android:id="@+id/imageView1"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:id="@+id/imageView2"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="@string/Go"
+        android:id="@+id/button1"
+        android:width="9dp"
+        android:background="@color/white"
+        android:textColor="#E0162B"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:stateListAnimator="@null"
+
+        />
+
+    <EditText
+        android:layout_width="156dp"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText1"
+        android:layout_marginBottom="60dp"
+        android:background="#0B2C53"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:textColorHint="#FFFFFF"
+        android:paddingLeft="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="represent"
+        android:id="@+id/textView"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        android:layout_marginBottom="113dp"
+        android:layout_above="@+id/editText1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Find out who your representatives are."
+        android:id="@+id/textView2"
+        android:layout_marginTop="35dp"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textIsSelectable="true"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:id="@+id/textView3"
+        android:layout_marginTop="12dp"
+        android:textColor="#e1202e"
+        android:textSize="22dp"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

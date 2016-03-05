@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/activity_main_view"/>
+
+    <android.support.wearable.view.CardFrame
+    android:id="@+id/cardFrame2"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="85dp"
+    android:layout_below="@+id/button1"
+    android:layout_alignParentStart="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bboxer"
+            android:id="@+id/image_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senator Barbara Boxer"
+            android:textColor="#191919"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp" />
+
+    </RelativeLayout>
+    </android.support.wearable.view.CardFrame>
+
+    <TextView
+        android:id="@+id/text_2_party"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Democrat"
+        android:textColor="#2363A7"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>
