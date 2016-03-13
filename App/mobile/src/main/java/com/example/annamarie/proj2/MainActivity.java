@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     Intent intent = new Intent(MainActivity.this, RepresentativeListActivity.class);
                     intent.putExtras(bundle);
                     startActivity(intent);
-                    Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
-                    sendIntent.putExtra("GO", RepresentativeListActivity.n);
-                    startService(sendIntent);
+//                    Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+//                    sendIntent.putExtra("GO", RepresentativeListActivity.n);
+//                    startService(sendIntent);
 
                 }
                 else{
@@ -112,9 +112,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 bundle.putString("longitude", longi);
                 intent.putExtras(bundle);
                 startActivity(intent);
-                Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
-                sendIntent.putExtra("GO", RepresentativeListActivity.n);
-                startService(sendIntent);
+//                Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+//                sendIntent.putExtra("GO", RepresentativeListActivity.n);
+//                startService(sendIntent);
             }
         });
     }

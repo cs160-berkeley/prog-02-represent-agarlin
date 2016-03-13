@@ -25,6 +25,7 @@ import android.text.style.URLSpan;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -109,6 +110,8 @@ public class RepresentativeListActivity extends AppCompatActivity {
     static String n = " ";
     private TwitterLoginButton loginButton;
     int p;
+    Button b1,b2;
+    EditText ed1;
     ProgressBar progressBar;
     String zipcode;
     public static ArrayList<String> names;
@@ -170,6 +173,19 @@ public class RepresentativeListActivity extends AppCompatActivity {
         county = new String();
         hash = new HashMap<>();
         tenure = new ArrayList<>();
+        ed1=(EditText)findViewById(R.id.edit);
+        b1=(Button)findViewById(R.id.butt);
+        ed1.setHint("Enter zip code here");
+        ed1.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                ed1.setText("");
+                return false;
+            }
+        });
+
+
 
         if (extras != null) {
             System.out.println("extras not null");
@@ -203,12 +219,36 @@ public class RepresentativeListActivity extends AppCompatActivity {
         }
         once = true;
         if (shake) {
-            Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
-            sendIntent.putExtra("GO", n);
-            startService(sendIntent);
+            Toast.makeText(getApplicationContext(), "New Zip Code: " + zipcode, Toast.LENGTH_SHORT).show();
         }
 //        finish();
 //        startActivity(getIntent());
+        Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+        sendIntent.putExtra("GO", RepresentativeListActivity.n);
+        startService(sendIntent);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String zip = ed1.getText().toString();
+                if (zip != null) { //make sure to add a check that the zipcode is in this country too
+                    Toast.makeText(getApplicationContext(), "Looking for Representatives...", Toast.LENGTH_SHORT).show();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("zipcode", zip);
+                    Intent intent = new Intent(RepresentativeListActivity.this, RepresentativeListActivity.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+//                    Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+//                    sendIntent.putExtra("GO", RepresentativeListActivity.n);
+//                    startService(sendIntent);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Sorry, we don't have the representatives for that area yet!", Toast.LENGTH_SHORT).show();
+
+
+                }
+            }
+        });
 
 
 

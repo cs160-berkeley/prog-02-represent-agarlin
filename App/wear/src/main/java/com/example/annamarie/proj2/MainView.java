@@ -115,17 +115,17 @@ public class MainView extends FragmentActivity {
         mShaker = new ShakeListener(getApplicationContext());
         final String z = zipcodes.get(new Random().nextInt(zipcodes.size()));
         x = z;
-//        mShaker.setOnShakeListener(new ShakeListener.OnShakeListener() {
-//
-//            public void onShake() {
-////                zi.setText(z);
-//                yes = true;
-////                Toast.makeText(getApplicationContext(), "New Zip Code: " + z, Toast.LENGTH_SHORT).show();
-//                Intent i = new Intent(getApplicationContext(), WatchToPhoneService.class);
-//                getApplicationContext().startService(i);
-//            }
-//
-//        });
+        mShaker.setOnShakeListener(new ShakeListener.OnShakeListener() {
+
+            public void onShake() {
+//                zi.setText(z);
+                yes = true;
+//                Toast.makeText(getApplicationContext(), "New Zip Code: " + z, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(), WatchToPhoneService.class);
+                getApplicationContext().startService(i);
+            }
+
+        });
 
         final GridViewPager pager1 = (GridViewPager) findViewById(R.id.pager1);
         pager1.setAdapter(new SampleGridPagerAdapter(this, getFragmentManager()));

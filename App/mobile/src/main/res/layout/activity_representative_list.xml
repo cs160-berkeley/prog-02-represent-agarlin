@@ -11,20 +11,47 @@
 
     >
 
-    <!--android:fitsSystemWindows="true"-->
-    <!--<android.support.design.widget.AppBarLayout-->
-        <!--android:id="@+id/app_bar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+    android:fitsSystemWindows="true"
 
-        <!--<android.support.v7.widget.Toolbar-->
-            <!--android:id="@+id/toolbar"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="?attr/actionBarSize"-->
-            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#0B2C53"
+        android:theme="@style/AppTheme.AppBarOverlay">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+        <EditText
+            android:layout_width="156dp"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/edit"
+            android:layout_marginBottom="60dp"
+            android:background="#0B2C53"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_above="@+id/button2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:textColorHint="#FFFFFF"
+            android:paddingLeft="7dp"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="@string/Go"
+            android:id="@+id/butt"
+            android:width="9dp"
+            android:background="@color/white"
+            android:textColor="#E0162B"
+            android:stateListAnimator="@null"
 
-    <!--</android.support.design.widget.AppBarLayout>-->
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+       </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
 
     <!--<FrameLayout-->
         <!--android:id="@+id/frameLayout"-->
@@ -34,6 +61,8 @@
 
         <!--<include layout="@layout/representative_list" />-->
     <!--</FrameLayout>-->
+
+
 
     <GridView
         android:id="@+id/gridView1"

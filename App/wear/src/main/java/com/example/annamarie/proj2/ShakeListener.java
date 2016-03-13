@@ -97,7 +97,7 @@ public class ShakeListener extends Activity implements SensorEventListener {
 
     public void onSensorChanged(SensorEvent event) {
 //        System.out.println(lastX);
-////        System.out.println("");
+        System.out.println("");
 //        System.out.println(lastY);
 //        System.out.println(lastZ);
 //        System.out.println(event.values[0]);
@@ -120,7 +120,7 @@ public class ShakeListener extends Activity implements SensorEventListener {
         if (event.values[0] == lastX || event.values[1] == lastY || event.values[2] == lastZ) {
             y =false;
         }
-        System.out.println(y);
+//        System.out.println(y);
         lastX = event.values[0];
         lastY = event.values[1];
         lastZ = event.values[2];

@@ -50,6 +50,7 @@ public class PhoneListenerService extends WearableListenerService {
             //you need to add this flag since you're starting a new activity from a service
             String name = new String(messageEvent.getData());
             System.out.println(name);
+            System.out.println(RepresentativeListActivity.hash);
             ArrayList<String> array = RepresentativeListActivity.hash.get(name);
             Bundle bundle = new Bundle();
             bundle.putString("bio", array.get(3));
