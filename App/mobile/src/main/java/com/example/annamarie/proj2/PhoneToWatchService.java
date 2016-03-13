@@ -36,6 +36,7 @@ public class PhoneToWatchService extends Service implements GoogleApiClient.Conn
     private GoogleApiClient mApiClient;
     private List<Node> nodes = new ArrayList<>();
 
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -61,8 +62,9 @@ public class PhoneToWatchService extends Service implements GoogleApiClient.Conn
     }
 
     @Override //alternate method to connecting: no longer create this in a new thread, but as a callback
-    public void onConnected(Bundle bundle) {
+    public void onConnected(final Bundle bundle) {
         Log.d("T", "in onconnected");
+        final Service _this = this;
         Wearable.NodeApi.getConnectedNodes(mApiClient)
                 .setResultCallback(new ResultCallback<NodeApi.GetConnectedNodesResult>() {
                     @Override
@@ -71,8 +73,14 @@ public class PhoneToWatchService extends Service implements GoogleApiClient.Conn
                         Log.d("T", "found nodes");
                         //when we find a connected node, we populate the list declared above
                         //finally, we can send a message
-                        sendMessage("/GO", "go!");
+//                        if (RepresentativeListActivity.send) {
+                        System.out.println("n: " + RepresentativeListActivity.n);
+//                        String message = bundle.getString("GO");
+
+                        sendMessage("/GO", RepresentativeListActivity.n);
+
                         Log.d("T", "sent");
+                        _this.stopSelf();
                     }
                 });
     }

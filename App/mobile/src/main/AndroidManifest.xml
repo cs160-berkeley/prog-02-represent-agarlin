@@ -3,7 +3,9 @@
     package="com.example.annamarie.proj2">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,6 +39,13 @@
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAuru1xcOMhlPxbm7p7l2BfKZPT50qYwds"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cb9a106ab82439b49fba6778fe96d6f8ba026a24" />
     </application>
 
 </manifest>

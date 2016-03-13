@@ -10,6 +10,7 @@
 
 
     >
+
     <!--android:fitsSystemWindows="true"-->
     <!--<android.support.design.widget.AppBarLayout-->
         <!--android:id="@+id/app_bar"-->
@@ -51,8 +52,11 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="47dp" />
 
-
-
+    <!--<com.twitter.sdk.android.core.identity.TwitterLoginButton-->
+        <!--android:id="@+id/twitter_login_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"/>-->
 
 
 </RelativeLayout>

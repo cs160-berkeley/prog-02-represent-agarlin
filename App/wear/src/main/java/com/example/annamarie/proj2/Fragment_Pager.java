@@ -117,14 +117,14 @@ public class Fragment_Pager extends FragmentPagerAdapter {
 
         }
         public void change(View view, View view2, List zi) {
-            TextView zip = (TextView) view.findViewById(R.id.textView5);
+//            TextView zip = (TextView) view.findViewById(R.id.textView5);
             TextView name = (TextView) view.findViewById(R.id.text_1);
             ImageView image = (ImageView) view.findViewById(R.id.image_1);
             name.setText("Senator Barbara Boxer");
             x = true;
             System.out.println(x);
             image.setImageResource(R.drawable.bboxer);
-            zip.setText((String) zi.get(0));
+//            zip.setText((String) zi.get(0));
             z = (String)zi.get(0);
             Intent i = new Intent(context, WatchToPhoneService.class);
             context.startService(i);

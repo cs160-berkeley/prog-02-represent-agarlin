@@ -96,13 +96,13 @@ public class ShakeListener extends Activity implements SensorEventListener {
     }
 
     public void onSensorChanged(SensorEvent event) {
-        System.out.println(lastX);
-//        System.out.println("");
-        System.out.println(lastY);
-        System.out.println(lastZ);
-        System.out.println(event.values[0]);
-        System.out.println(event.values[1]);
-        System.out.println(event.values[2]);
+//        System.out.println(lastX);
+////        System.out.println("");
+//        System.out.println(lastY);
+//        System.out.println(lastZ);
+//        System.out.println(event.values[0]);
+//        System.out.println(event.values[1]);
+//        System.out.println(event.values[2]);
          deltaX = Math.abs(lastX - event.values[0]);
          deltaY = Math.abs(lastY - event.values[1]);
          deltaZ = Math.abs(lastZ - event.values[2]);
