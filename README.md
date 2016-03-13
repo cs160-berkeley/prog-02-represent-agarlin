@@ -9,7 +9,7 @@ AnnaMarie Garlin ([agarlin18@berkeley.edu](mailto:agarlin18@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [Project 2c] (https://www.youtube.com/watch?v=9lEv0C7uHSI)
 
 ## Screenshots
 
